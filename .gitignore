@@ -2,3 +2,5 @@
 cmake-build-debug
 third-party/libtorch/*
 third-party/pybind11/*
+*.pyc
+*.DS_Store
