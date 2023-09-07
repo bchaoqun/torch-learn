@@ -85,7 +85,7 @@ namespace Preliminaries {
         std::cout << "shape: " << '\n'
                   << sum.sizes() << '\n';
         std::cout << "----------------------------------------------------------------" << '\n';
-        // 两个张量之间的运算会调用广播机制 broadcasting mechanism,广播机制会自动将维度较小的张量复制到维度较大的张量中
+        // 两个张量之间的运算会调用广播机制 broadcasting mechanism，广播机制会自动将维度较小的张量复制到维度较大的张量中
         torch::Tensor a = torch::arange(3).reshape({3, 1});
         torch::Tensor b = torch::arange(2).reshape({1, 2});
         std::cout << a << '\n';
