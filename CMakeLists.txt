@@ -11,8 +11,14 @@ set(Python3_INCLUDE_DIR /Users/bichaoqun/miniconda3/envs/torch-learn/include/pyt
 set(Python3_LIBRARY /Users/bichaoqun/miniconda3/envs/torch-learn/lib/libpython3.8.dylib)
 find_package(Python3 REQUIRED Development)
 
-add_subdirectory(../torch-learn/third-party/pybind11)
+#add_subdirectory(../torch-learn/third-party/pybind11)
+#add_subdirectory(../torch-learn/third-party/NumCpp)
 
-add_executable(torch_learn main.cpp)
+include_directories(include)
 
-target_link_libraries(torch_learn ${TORCH_LIBRARIES} pybind11::embed)
+add_executable(torch_learn src/main.cpp
+        src/Preliminaries.cpp
+        include/Preliminaries.h)
+
+#target_link_libraries(torch_learn ${TORCH_LIBRARIES} pybind11::embed)
+target_link_libraries(torch_learn ${TORCH_LIBRARIES})
