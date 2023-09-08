@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.16)
 project(torch_learn)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
+
+find_package(CUDA REQUIRED)
 
 set(Torch_DIR ../torch-learn/third-party/libtorch/share/cmake/Torch)
 find_package(Torch REQUIRED)
